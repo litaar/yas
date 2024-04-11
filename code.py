@@ -17,21 +17,49 @@ def Moneybuckets():
 
 
 def Compoundinterest():
-    income = float(input("Annually investment: "))
+    #Age they start investing
+    age = int(input("Age:"))
+    # The amount they  invest each year
+    amount = float(input("Annually investment: "))
+
+    #Average annual interest rate
     interest = float(input("Average annual interest: "))
-    age = -2
-    while age < 59:
-        age = age + 1
-        print(age + 1)
-        for age in range(1,61):
-            print(income)
+
+    #Set total amount of money to 0
+    total = 0
+
+    #Print start of table
+    print("Age ✮✮ Investment ✮✮ Total")
+
+    # For each age until age is 60:
+    for m in range(age, 61):
+        # Amount invested each year is added to the current total
+        total += amount
+    # The interest rate is added on top of the current total
+        total += total * 0.1
+
+
+    #round total to a whole number
+        total = int(round(total, 0))
+
+    #print each line of table
+        print(f" {m}      ${amount}      ${total}")
 
 
 
-    investment = income * 0.10 * interest
+    #while age < 61:
+        #interest_num = investment * interest #=500
+
+        #total = investment + interest_num #=5000 + 500 (5500)
+        #y = interest *(total + investment) #= 10% x 10500
+        #m = y + total + investment
 
 
-    total = total + investment
+
+
+
+
+
 
 
 
